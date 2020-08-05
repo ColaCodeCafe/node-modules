@@ -1,0 +1,24 @@
+{
+  "name": "@codecafe/vue-password-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "typings": "./types/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test-c": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "jangts",
+  "license": "ISC",
+  "dependencies": {
+    "@codecafe/password-checker": "^1.0.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
+}
