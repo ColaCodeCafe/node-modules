@@ -6,9 +6,13 @@ import { PasswordCheckResult } from '../src/PasswordCheckResult';
 
 test('helpers.PatternSet test', () => {
     const patters = new PatternSet({
-        allowedSymbols: ['!', ':']
+        ...defaultPasswordCheckerOptions,
+        allowedSymbols: ['!', ':'],
+        repetitionLength: 4,
+        numberConsecutionLength: 5,
+        letterConsecutionLength: 5
     } as IPasswordCheckerOptions)
-    // console.log(patters)
+    console.log(patters)
 
     expect(getLevel(patters, 'abcdefg')).toBe(-1)
     expect(getLevel(patters, '12345678')).toBe(0)
