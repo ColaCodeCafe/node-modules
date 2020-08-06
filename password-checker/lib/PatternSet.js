@@ -38,19 +38,19 @@ var PatternSet = /** @class */ (function (_super) {
         _this.consecutionList = [];
         numbers.forEach(function (char, index, chars) {
             _this.repetitionList.push(helpers_1.createRepetition(char, options.repetitionLength));
-            if (index < chars.length - options.numberConsecutionLength) {
+            if (index <= chars.length - options.numberConsecutionLength) {
                 _this.consecutionList.push(helpers_1.createConsecution(chars, index, options.numberConsecutionLength));
             }
         });
         letters.forEach(function (char, index, chars) {
             _this.repetitionList.push(helpers_1.createRepetition(char, options.repetitionLength));
-            if (index < chars.length - options.letterConsecutionLength) {
+            if (index <= chars.length - options.letterConsecutionLength) {
                 _this.consecutionList.push(helpers_1.createConsecution(chars, index, options.letterConsecutionLength));
             }
         });
         LETTERS.forEach(function (char, index, chars) {
             _this.repetitionList.push(helpers_1.createRepetition(char, options.repetitionLength));
-            if (index < chars.length - options.letterConsecutionLength) {
+            if (index <= chars.length - options.letterConsecutionLength) {
                 _this.consecutionList.push(helpers_1.createConsecution(chars, index, options.letterConsecutionLength));
             }
         });
