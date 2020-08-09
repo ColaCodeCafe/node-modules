@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createConsecution = exports.createRepetition = exports.createCharRange = exports.fillCharTweens = exports.escapeSymbols = exports.checkCharConsecution = exports.checkRepetition = exports.checkOutOfLength = exports.checkCharsSetAndLength = exports.getLevel = exports.defaultPasswordCheckerOptions = void 0;
-var PasswordCheckResult_1 = require("./PasswordCheckResult");
+var PasswordLevelCheckDetails_1 = require("./PasswordLevelCheckDetails");
 exports.defaultPasswordCheckerOptions = {
     allowedSymbols: ['_', '-', '!', '@', '#', '$', '%', '^', '&', '*', '?'],
     lengthRange: [8, 18],
@@ -14,7 +14,7 @@ exports.defaultPasswordCheckerOptions = {
 };
 function getLevel(patterns, password, details) {
     if (details === void 0) { details = null; }
-    details = details || new PasswordCheckResult_1.PasswordCheckResult;
+    details = details || new PasswordLevelCheckDetails_1.PasswordLevelCheckDetails;
     details.legal = checkCharsSetAndLength(patterns, password);
     if (details.legal) {
         details.outOfLength = 0;

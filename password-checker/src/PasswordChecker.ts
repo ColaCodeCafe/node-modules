@@ -1,6 +1,6 @@
 import { PatternSet } from "./PatternSet";
 import { getLevel, checkOutOfLength, checkCharsSetAndLength, checkRepetition, checkCharConsecution, defaultPasswordCheckerOptions } from "./helpers";
-import { PasswordCheckResult } from "./PasswordCheckResult";
+import { PasswordLevelCheckDetails } from "password-checker/src/PasswordLevelCheckDetails";
 import { IPasswordCheckerOptions, ILevelDetails } from "../types/helpers";
 
 export class PasswordChecker {
@@ -21,7 +21,7 @@ export class PasswordChecker {
     }
 
     getLevel(password: string): number {
-        this.lastLevelDetails = new PasswordCheckResult
+        this.lastLevelDetails = new PasswordLevelCheckDetails
         return getLevel(this.patters, password, this.lastLevelDetails)
     }
 

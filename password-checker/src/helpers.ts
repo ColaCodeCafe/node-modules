@@ -1,6 +1,6 @@
 import { PatternSet } from "./PatternSet"
 import { IPasswordCheckerOptions, ILevelDetails } from "../types/helpers"
-import { PasswordCheckResult } from "./PasswordCheckResult"
+import { PasswordLevelCheckDetails } from "password-checker/src/PasswordLevelCheckDetails"
 
 export const defaultPasswordCheckerOptions: IPasswordCheckerOptions = {
     allowedSymbols: ['_', '-', '!', '@', '#', '$', '%', '^', '&', '*', '?'],
@@ -14,7 +14,7 @@ export const defaultPasswordCheckerOptions: IPasswordCheckerOptions = {
 }
 
 export function getLevel(patterns: PatternSet, password: string, details: ILevelDetails = null): number {
-    details = details || new PasswordCheckResult
+    details = details || new PasswordLevelCheckDetails
     details.legal = checkCharsSetAndLength(patterns, password)
     if (details.legal) {
         details.outOfLength = 0

@@ -1,9 +1,10 @@
 import { IPasswordCheckerOptions, ILevelDetails } from "./helpers"
 
 declare class PasswordChecker {
-    lastLevelDetails: ILevelDetails
     charsAndLengthPattern: RegExp
     classifiedCharsPatterns: RegExp[]
+
+    lastLevelDetails: ILevelDetails
 
     constructor(options?: IPasswordCheckerOptions | any);
 

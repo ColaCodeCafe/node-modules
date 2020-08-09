@@ -1,6 +1,6 @@
-import { ILevelDetails } from "../types/helpers";
+import { ILevelDetails } from "password-checker/types/helpers";
 
-export class PasswordCheckResult implements ILevelDetails {
+export class PasswordLevelCheckDetails implements ILevelDetails {
     legal: boolean = true
     outOfLength: number = 0
     charTypesCount?: number

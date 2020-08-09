@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PasswordChecker = void 0;
 var PatternSet_1 = require("./PatternSet");
 var helpers_1 = require("./helpers");
-var PasswordCheckResult_1 = require("./PasswordCheckResult");
+var PasswordLevelCheckDetails_1 = require("./PasswordLevelCheckDetails");
 var PasswordChecker = /** @class */ (function () {
     function PasswordChecker(options) {
         if (options === void 0) { options = null; }
@@ -26,7 +26,7 @@ var PasswordChecker = /** @class */ (function () {
         configurable: true
     });
     PasswordChecker.prototype.getLevel = function (password) {
-        this.lastLevelDetails = new PasswordCheckResult_1.PasswordCheckResult;
+        this.lastLevelDetails = new PasswordLevelCheckDetails_1.PasswordLevelCheckDetails;
         return helpers_1.getLevel(this.patters, password, this.lastLevelDetails);
     };
     PasswordChecker.prototype.checkLength = function (password) {

@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PasswordCheckResult = void 0;
-var PasswordCheckResult = /** @class */ (function () {
-    function PasswordCheckResult() {
+exports.PasswordLevelCheckDetails = void 0;
+var PasswordLevelCheckDetails = /** @class */ (function () {
+    function PasswordLevelCheckDetails() {
         this.legal = true;
         this.outOfLength = 0;
     }
-    return PasswordCheckResult;
+    return PasswordLevelCheckDetails;
 }());
-exports.PasswordCheckResult = PasswordCheckResult;
-//# sourceMappingURL=PasswordCheckResult.js.map
+exports.PasswordLevelCheckDetails = PasswordLevelCheckDetails;
+//# sourceMappingURL=PasswordLevelCheckDetails.js.map
