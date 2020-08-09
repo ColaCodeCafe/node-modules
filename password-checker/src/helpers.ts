@@ -1,6 +1,6 @@
 import { PatternSet } from "./PatternSet"
 import { IPasswordCheckerOptions, ILevelDetails } from "../types/helpers"
-import { PasswordLevelCheckDetails } from "password-checker/src/PasswordLevelCheckDetails"
+import { PasswordLevelCheckDetails } from "./PasswordLevelCheckDetails"
 
 export const defaultPasswordCheckerOptions: IPasswordCheckerOptions = {
     allowedSymbols: ['_', '-', '!', '@', '#', '$', '%', '^', '&', '*', '?'],

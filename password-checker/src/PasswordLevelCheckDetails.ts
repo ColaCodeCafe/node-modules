@@ -1,4 +1,4 @@
-import { ILevelDetails } from "password-checker/types/helpers";
+import { ILevelDetails } from "../types/helpers";
 
 export class PasswordLevelCheckDetails implements ILevelDetails {
     legal: boolean = true

@@ -2,7 +2,7 @@ import { expect, test } from '@jest/globals';
 import { PatternSet } from '../src/PatternSet';
 import { getLevel, defaultPasswordCheckerOptions } from '../src/helpers';
 import { IPasswordCheckerOptions, ILevelDetails } from '../types/helpers';
-import { PasswordLevelCheckDetails } from 'password-checker/src/PasswordLevelCheckDetails';
+import { PasswordLevelCheckDetails } from '../src/PasswordLevelCheckDetails';
 
 test('helpers.PatternSet test', () => {
     const patters = new PatternSet({
