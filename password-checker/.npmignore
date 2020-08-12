@@ -1,6 +1,6 @@
-src/
-dist/
-tests/
+/src/
+/dist/tests/
+/tests/
 node_modules/
 jest.config.js
 tsconfig.json  

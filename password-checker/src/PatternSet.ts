@@ -35,6 +35,13 @@ export class PatternSet extends Array<RegExp> {
             }
         })
 
+        numbers.reverse().forEach((char, index, chars) => {
+            this.repetitionList.push(createRepetition(char, options.repetitionLength))
+            if (index <= chars.length - options.numberConsecutionLength) {
+                this.consecutionList.push(createConsecution(chars, index, options.numberConsecutionLength))
+            }
+        })
+
         letters.forEach((char, index, chars) => {
             this.repetitionList.push(createRepetition(char, options.repetitionLength))
             if (index <= chars.length - options.letterConsecutionLength) {
